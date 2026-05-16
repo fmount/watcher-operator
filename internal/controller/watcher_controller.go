@@ -909,7 +909,7 @@ func (r *WatcherReconciler) generateServiceConfigDBJobs(
 		templateParameters["ACSecret"] = acData.Secret
 	}
 
-	return GenerateConfigsGeneric(ctx, helper, instance, envVars, templateParameters, customData, labels, true)
+	return GenerateConfigsGeneric(ctx, helper, instance, envVars, templateParameters, customData, labels, true, []string{})
 }
 
 func (r *WatcherReconciler) ensureDBSync(
